@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\gaoxi\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gaoxi\\.nuget\\packages"
+    ]
+  }
+}

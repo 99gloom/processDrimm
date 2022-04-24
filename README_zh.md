@@ -7,7 +7,7 @@ IAGS所使用的block文件可通过DRIMM-synteny生成。
 ## 1.生成DRIMM-synteny的input文件 (processOrthofinder.py)
 
 ```python
-dir = 'D:/InferAncestorGenome/processDRIMM/example/'
+dir = './processDRIMM/example/'
 
 sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 gff_list = ['Brachy.gff','Maize.gff','Rice.gff','Sorghum.gff','Telongatum.gff']
@@ -78,9 +78,9 @@ DRIMM-synteny的输入:
 ## 3.生成IAGS的input (processDrimm.py)
 
 ```python
-block_file = 'D:/InferAncestorGenome/processDRIMM/example/drimm/blocks.txt'
-synteny_file = 'D:/InferAncestorGenome/processDRIMM/example/drimm/synteny.txt'
-outdir = 'D:/InferAncestorGenome/processDRIMM/example/drimm/'
+block_file = './processDRIMM/example/drimm/blocks.txt'
+synteny_file = './processDRIMM/example/drimm/synteny.txt'
+outdir = './processDRIMM/example/drimm/'
 chr_number = [5,10,12,10,7]
 sp_list = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 target_rate = '2:4:2:2:2'

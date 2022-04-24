@@ -1,4 +1,4 @@
-#获得IAGS input (windows)
+# 获得IAGS input (windows)
 
 IAGS所使用的block文件可通过DRIMM-synteny生成。
 

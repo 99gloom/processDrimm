@@ -4,11 +4,11 @@ from pathlib import Path
 import os
 
 class processLCSAndFirstFilter:
-    def __init__(self, outdir, outputDir_temp, ratioPath, blockDir, sequenceDir, sourceSyntenyPath, sp, chr_shape):
+    def __init__(self, outdir, outputDir_temp, ratio, blockDir, sequenceDir, sourceSyntenyPath, sp, chr_shape):
         self.outdir_synteny = outdir
-        self.outdir_rawBlock = outputDir_temp + '/RawBlocks'
+        self.outdir_rawBlock = outputDir_temp
         self.sp = sp
-        self.ratio = ''
+        self.ratio = ratio
         self.blockDir = blockDir
         self.sequenceDir = sequenceDir
         self.sourceSyntenyPath = sourceSyntenyPath
@@ -19,15 +19,15 @@ class processLCSAndFirstFilter:
         #     self.sp.append(i.split('/')[-1].split('.')[0])
 
         #获取sp之间的拷贝数比例
-        ratioDir = {}
-        with open(ratioPath, 'r') as rf:
-            for line in rf:
-                content = line.rstrip('\n')
-                content = content.split('\t')
-                ratioDir[content[0]] = content[1]
-        for i in self.sp:
-            self.ratio += ratioDir[i] + ':'
-        self.ratio = self.ratio[:-1]
+        # ratioDir = {}
+        # with open(ratio, 'r') as rf:
+        #     for line in rf:
+        #         content = line.rstrip('\n')
+        #         content = content.split('\t')
+        #         ratioDir[content[0]] = content[1]
+        # for i in self.sp:
+        #     self.ratio += ratioDir[i] + ':'
+        # self.ratio = self.ratio[:-1]
 
         if (not Path(self.outdir_rawBlock).exists()):
             os.makedirs(self.outdir_rawBlock)

@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import random
 
-dir = 'D:/InferAncestorGenome/processDRIMM/example/'
+dir = './processDRIMM/example/'
 
 sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 gff_list = ['Brachy.gff','Maize.gff','Rice.gff','Sorghum.gff','Telongatum.gff']

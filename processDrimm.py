@@ -23,9 +23,9 @@ def syntenyDict(file):
     return syntenyDict
 
 # 用来处理drimm输出得到各个物种的输入
-block_file = 'D:/InferAncestorGenome/processDRIMM/example/drimm/blocks.txt'
-synteny_file = 'D:/InferAncestorGenome/processDRIMM/example/drimm/synteny.txt'
-outdir = 'D:/InferAncestorGenome/processDRIMM/example/drimm/'
+block_file = './processDRIMM/example/drimm/blocks.txt'
+synteny_file = './processDRIMM/example/drimm/synteny.txt'
+outdir = './processDRIMM/example/drimm/'
 chr_number = [5,10,12,10,7]
 sp_list = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 target_rate = '2:4:2:2:2'

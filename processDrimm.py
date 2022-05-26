@@ -54,12 +54,9 @@ for i in range(len(sp_sequences)):
     outfile = drimm_split_blocks_dir + '/' + sp_list[i] + '.block'
     outfile = open(outfile,'w')
     for j in sp_sequences[i]:
-        outfile.write('s ')
+        # outfile.write('s ')
         for k in j:
-            if k.startswith('-'):
-                block = k[1:]
-            else:
-                block = k
+            outfile.write(k+' ')
         outfile.write('\n')
     outfile.close()
 

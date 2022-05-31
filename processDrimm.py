@@ -5,12 +5,13 @@ from utils import processFinalFilter as pff
 
 
 block_file = './example/drimm/blocks.txt'
-synteny_file = './example/drimm/synteny.txt'
+drimmSyntenyFile = './example/drimm/synteny.txt'
 outdir = './example'
 chr_number = [5,10,12,10,7]
 sp_list = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 target_rate = '2:4:2:2:2'
 
+# outdir为processOrthofind的输出路径
 
 def readSequence(file):
     sequence = []
@@ -37,14 +38,19 @@ def syntenyDict(file):
 
 # 用来处理drimm输出得到各个物种的输入
 
+drimm_split_blocks_dir = outdir + '/drimmBlocks'
+raw_block_dir = outdir + '/temporaryBlockFiles'
+result_dir = outdir + '/finalBlocks'
 
-if (not Path(outdir + '/result').exists()):
-    os.makedirs(outdir + '/result')
-if (not Path(outdir + '/blockFiles').exists()):
-    os.makedirs(outdir + '/blockFiles')
-drimm_split_blocks_dir = outdir + '/drimm'
-raw_block_dir = outdir + '/blockFiles'
-result_dir = outdir + '/result'
+if (not Path(drimm_split_blocks_dir).exists()):
+    os.makedirs(drimm_split_blocks_dir)
+
+if (not Path(raw_block_dir).exists()):
+    os.makedirs(raw_block_dir)
+
+if (not Path(result_dir).exists()):
+    os.makedirs(result_dir)
+
 
 sequence = readSequence(block_file)
 sp_sequences = []
@@ -57,18 +63,19 @@ for i in range(len(sp_sequences)):
     outfile = drimm_split_blocks_dir + '/' + sp_list[i] + '.block'
     outfile = open(outfile,'w')
     for j in sp_sequences[i]:
-        # outfile.write('s ')
+        outfile.write('s ')
         for k in j:
             outfile.write(k+' ')
         outfile.write('\n')
     outfile.close()
 
-processLCSAndFirstFilter = plff.processLCSAndFirstFilter(result_dir, raw_block_dir, target_rate,
-                                                         drimm_split_blocks_dir, outdir, drimm_split_blocks_dir + '/synteny.txt',
+processLCSAndFirstFilter = plff.processLCSAndFirstFilter(drimm_split_blocks_dir, raw_block_dir, target_rate,
+                                                         drimm_split_blocks_dir, outdir, drimmSyntenyFile,
                                                          sp_list, 's')
 processLCSAndFirstFilter.excute()
 
-processFinalFilter = pff.processFinalFilter(sp_list, raw_block_dir, result_dir, 's')
+
+processFinalFilter = pff.processFinalFilter(sp_list, raw_block_dir, drimm_split_blocks_dir,  result_dir, 's')
 processFinalFilter.excute()
 
 

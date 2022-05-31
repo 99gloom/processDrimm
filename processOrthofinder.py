@@ -1,15 +1,40 @@
 import pandas as pd
 import numpy as np
-import random
 
-dir = './processDRIMM/example/'
+dir = './example'
 
 sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 gff_list = ['Brachy.gff','Maize.gff','Rice.gff','Sorghum.gff','Telongatum.gff']
 sp_ratio = [2,4,2,2,2]
 
 
-ortho = pd.read_csv(dir+'Orthogroups.tsv',sep='\t')
+
+
+gff_path_list = []
+for i in range(len(gff_list)):
+    temp = dir + '/' + gff_list[i]
+    gff_path_list.append(temp)
+
+for i in gff_path_list:
+    dataFrame = pd.read_csv(i, header=None, sep='\t')
+    name = dataFrame.at[0, 0]
+    number_index = 0
+    for j in range(len(name) - 1, -1, -1):
+        if name[j].isdigit():
+            continue
+        else:
+            number_index = j + 1
+            break
+    # print(number_index)
+    # print(name[number_index:])
+    dataFrame[0] = dataFrame[0].map(lambda x: int(x[number_index:]))
+
+    dataFrame = dataFrame.sort_values(by=[0, 2], ascending=[True, True])
+    dataFrame[0] = dataFrame[0].map(lambda x: name[:number_index] + str(x))
+    dataFrame[1] = dataFrame[1].map(lambda x: x.split(';')[0])
+    dataFrame.to_csv(i, header=None, index=None, sep='\t')
+
+ortho = pd.read_csv(dir+'/Orthogroups.tsv',sep='\t')
 ortho = ortho.fillna('')
 print(ortho)
 columns = ortho.columns.tolist()
@@ -56,12 +81,12 @@ print('gene rate')
 for i in rate_dir.keys():
     print(i + '\t' + str(rate_dir[i]))
 
-outfile = dir + 'group.xls'
+outfile = dir + '/group.xls'
 count = 1
 outfile = open(outfile,'w')
 outfile.write('gene\tgroup\n')
 
-outfile_filter = dir + 'filter_group.xls'
+outfile_filter = dir + '/filter_group.xls'
 outfile_filter = open(outfile_filter,'w')
 outfile_filter.write('gene\tgroup\n')
 
@@ -77,13 +102,13 @@ for i in group_dir.keys():
 outfile.close()
 outfile_filter.close()
 
-group = pd.read_csv(dir +'group.xls',sep='\t')
+group = pd.read_csv(dir +'/group.xls',sep='\t')
 group = np.asarray(group)
 group_dir = {}
 for i in group:
     group_dir[i[0]] = i[1]
 
-group_filter = pd.read_csv(dir +'filter_group.xls',sep='\t')
+group_filter = pd.read_csv(dir +'/filter_group.xls',sep='\t')
 group_filter = np.asarray(group_filter)
 group_filter_dir = {}
 for i in group_filter:
@@ -136,17 +161,24 @@ def outSequence(sequence,outfile):
     outfile.close()
 
 
+sample_sequence_files = dir + '/drimm.sequence'
+sample_sequence_files = open(sample_sequence_files, 'w')
+
 for i in gff_list:
-    gff = dir + i
+    gff = dir + '/' + i
     sequence,sequence_name = getAllSequence(gff)
     filter_sequence = getFilterSequence(gff)
     item = i.split('.')
-    outfile = dir + item[0] +'.sequence'
+    outfile = dir  + '/' + item[0] +'.sequence'
     outSequence(filter_sequence, outfile)
-    outallfile = dir + item[0] +'.all.sequence'
+    outallfile = dir + '/' + item[0] +'.all.sequence'
     outSequence(sequence, outallfile)
-    outallfilename = dir + item[0] + '.all.sequence.genename'
+    outallfilename = dir + '/' + item[0] + '.all.sequence.genename'
     outSequence(sequence_name, outallfilename)
 
+    for j in filter_sequence:
+        for k in j:
+            sample_sequence_files.write(str(k) + ' ')
+        sample_sequence_files.write('\n')
 
-
+sample_sequence_files.close()

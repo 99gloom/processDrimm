@@ -4,48 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="增加LCS步骤">
-      <change afterPath="$PROJECT_DIR$/processGenenumber.py" afterDir="false" />
+    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="测试输出">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/Telongatum.all.sequence" beforeDir="false" afterPath="$PROJECT_DIR$/example/Telongatum.all.sequence" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/Telongatum.all.sequence.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/Telongatum.all.sequence.genename" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/Telongatum.gff" beforeDir="false" afterPath="$PROJECT_DIR$/example/Telongatum.gff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/Telongatum.sequence" beforeDir="false" afterPath="$PROJECT_DIR$/example/Telongatum.sequence" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/blockFiles/Brachy.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/blockFiles/Maize.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/blockFiles/Rice.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/blockFiles/Sorghum.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/blockFiles/Telongatum.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm.sequence" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimm.sequence" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/Brachy.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/Maize.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/Rice.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/Sorghum.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/Telongatum.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/blocks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimm/blocks.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/modifiedSequence.txt" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimm/modifiedSequence.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/sequenceColor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimm/sequenceColor.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/split.txt" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimm/split.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/drimm/synteny.txt" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimm/synteny.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Brachy.final.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Brachy.synteny" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Brachy.synteny.genename" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Maize.final.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Maize.synteny" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Maize.synteny.genename" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Rice.final.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Rice.synteny" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Rice.synteny.genename" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Sorghum.final.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Sorghum.synteny" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Sorghum.synteny.genename" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Telongatum.final.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Telongatum.synteny" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/result/Telongatum.synteny.genename" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processDrimm.py" beforeDir="false" afterPath="$PROJECT_DIR$/processDrimm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/processOrthofinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/processOrthofinder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/processFinalFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/processFinalFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/processLCSAndFirstFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/processLCSAndFirstFilter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,6 +193,7 @@
       <workItem from="1653530235798" duration="1199000" />
       <workItem from="1653531458874" duration="3448000" />
       <workItem from="1653544490894" duration="532000" />
+      <workItem from="1654006205821" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1650771823108</created>
@@ -275,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653965083965</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="生成一个文件夹，drimmBlocks为直接使用未过滤的block进行的匹配，而finalBlocks为过滤后的block，可直接给用于IAGS输入">
+      <created>1654005612815</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654005612815</updated>
+    </task>
+    <task id="LOCAL-00008" summary="测试输出">
+      <created>1654005634398</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654005634398</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +296,9 @@
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="更换代码中的默认路径" />
     <MESSAGE value="增加LCS步骤" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加LCS步骤" />
+    <MESSAGE value="生成一个文件夹，drimmBlocks为直接使用未过滤的block进行的匹配，而finalBlocks为过滤后的block，可直接给用于IAGS输入" />
+    <MESSAGE value="测试输出" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试输出" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/processDrimm_py$processDrimm.coverage" NAME="processDrimm 覆盖结果" MODIFIED="1654004496489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

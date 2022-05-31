@@ -36,12 +36,12 @@ for i in gff_path_list:
 
 ortho = pd.read_csv(dir+'/Orthogroups.tsv',sep='\t')
 ortho = ortho.fillna('')
-print(ortho)
+# print(ortho)
 columns = ortho.columns.tolist()
 
 
 ortho = np.asarray(ortho)
-print(ortho)
+# print(ortho)
 group_dir = {}
 for i in ortho:
     group = i[0]

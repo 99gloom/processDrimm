@@ -3,6 +3,15 @@ from pathlib import Path
 from utils import processLCSAndFirstFilter as plff
 from utils import processFinalFilter as pff
 
+
+block_file = './example/drimm/blocks.txt'
+synteny_file = './example/drimm/synteny.txt'
+outdir = './example'
+chr_number = [5,10,12,10,7]
+sp_list = ['Brachy','Maize','Rice','Sorghum','Telongatum']
+target_rate = '2:4:2:2:2'
+
+
 def readSequence(file):
     sequence = []
     with open(file,'r') as f:
@@ -27,12 +36,6 @@ def syntenyDict(file):
     return syntenyDict
 
 # 用来处理drimm输出得到各个物种的输入
-block_file = './example/drimm/blocks.txt'
-synteny_file = './example/drimm/synteny.txt'
-outdir = './example'
-chr_number = [5,10,12,10,7]
-sp_list = ['Brachy','Maize','Rice','Sorghum','Telongatum']
-target_rate = '2:4:2:2:2'
 
 
 if (not Path(outdir + '/result').exists()):

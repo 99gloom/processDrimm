@@ -39,7 +39,7 @@ def syntenyDict(file):
 # 用来处理drimm输出得到各个物种的输入
 
 drimm_split_blocks_dir = outdir + '/drimmBlocks'
-raw_block_dir = outdir + '/temporaryBlockFiles'
+raw_block_dir = outdir + '/tmp'
 result_dir = outdir + '/finalBlocks'
 
 if (not Path(drimm_split_blocks_dir).exists()):

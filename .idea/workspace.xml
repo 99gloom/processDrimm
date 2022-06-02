@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="测试输出">
+    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="注释部分print">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processOrthofinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/processOrthofinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Brachy.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Maize.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Rice.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Sorghum.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Telongatum.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/processDrimm.py" beforeDir="false" afterPath="$PROJECT_DIR$/processDrimm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +198,9 @@
       <workItem from="1653530235798" duration="1199000" />
       <workItem from="1653531458874" duration="3448000" />
       <workItem from="1653544490894" duration="532000" />
-      <workItem from="1654006205821" duration="77000" />
+      <workItem from="1654006205821" duration="149000" />
+      <workItem from="1654006369813" duration="26000" />
+      <workItem from="1654070888966" duration="7178000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1650771823108</created>
@@ -251,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654005634398</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="注释部分print">
+      <created>1654006314773</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654006314773</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,11 +312,12 @@
     <MESSAGE value="增加LCS步骤" />
     <MESSAGE value="生成一个文件夹，drimmBlocks为直接使用未过滤的block进行的匹配，而finalBlocks为过滤后的block，可直接给用于IAGS输入" />
     <MESSAGE value="测试输出" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试输出" />
+    <MESSAGE value="注释部分print" />
+    <option name="LAST_COMMIT_MESSAGE" value="注释部分print" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/processDrimm_py$processDrimm.coverage" NAME="processDrimm 覆盖结果" MODIFIED="1654004496489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/processDrimm_py$processOrthofinder.coverage" NAME="processOrthofinder 覆盖结果" MODIFIED="1654004096283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/processDrimm_py$processGenenumber.coverage" NAME="processGenenumber 覆盖结果" MODIFIED="1654005160896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/processDrimm_py$processDrimm.coverage" NAME="processDrimm 覆盖结果" MODIFIED="1654139494624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/processDrimm_py$processOrthofinder.coverage" NAME="processOrthofinder 覆盖结果" MODIFIED="1654006342748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/processDrimm_py$processGenenumber.coverage" NAME="processGenenumber 覆盖结果" MODIFIED="1654139677225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

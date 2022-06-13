@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="测试输出">
+    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="Default Changelist">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_5_31_9_55___Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在变基之前未提交的更改_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_5_31_9_55_取消提交了变更_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_zh.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Brachy.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Maize.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Rice.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Sorghum.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Telongatum.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/processDrimm.py" beforeDir="false" afterPath="$PROJECT_DIR$/processDrimm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processGenenumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/processGenenumber.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/processOrthofinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/processOrthofinder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +77,7 @@
       <recent name="C:\Users\DELL\processDrimm\utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.processGenenumber">
+  <component name="RunManager" selected="Python.processOrthofinder">
     <configuration name="processBlock" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="processDRIMM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,9 +174,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.processGenenumber" />
-        <item itemvalue="Python.processDrimm" />
         <item itemvalue="Python.processOrthofinder" />
+        <item itemvalue="Python.processDrimm" />
+        <item itemvalue="Python.processGenenumber" />
         <item itemvalue="Python.processBlock" />
         <item itemvalue="Python.processOrthofinder" />
       </list>
@@ -194,6 +207,7 @@
       <workItem from="1653531458874" duration="3448000" />
       <workItem from="1653544490894" duration="532000" />
       <workItem from="1654006205821" duration="77000" />
+      <workItem from="1655105932908" duration="10524000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1650771823108</created>
@@ -301,8 +315,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试输出" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/processDrimm_py$processDrimm.coverage" NAME="processDrimm 覆盖结果" MODIFIED="1654004496489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/processDrimm_py$processOrthofinder.coverage" NAME="processOrthofinder 覆盖结果" MODIFIED="1654004096283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/processDrimm_py$processDrimm.coverage" NAME="processDrimm 覆盖结果" MODIFIED="1655107973835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/processDrimm_py$processOrthofinder.coverage" NAME="processOrthofinder 覆盖结果" MODIFIED="1655126527972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/processDrimm_py$processGenenumber.coverage" NAME="processGenenumber 覆盖结果" MODIFIED="1654005160896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

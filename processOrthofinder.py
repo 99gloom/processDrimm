@@ -2,12 +2,57 @@ import pandas as pd
 import numpy as np
 
 dir = './example'
-
 sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 gff_list = ['Brachy.gff','Maize.gff','Rice.gff','Sorghum.gff','Telongatum.gff']
 sp_ratio = [2,4,2,2,2]
 
 
+
+def getFilterSequence(bed, group_filter_dir):
+    bed = pd.read_csv(bed,sep='\t',header=None)[[0,1]]
+
+    chrlist = bed[0].unique().tolist()
+
+    new_sequence = []
+    for i in chrlist:
+        split = bed.loc[bed[0] == i][1].tolist()
+
+        chr = []
+        for j in split:
+            if j in group_filter_dir.keys():
+               chr.append(group_filter_dir[j])
+        new_sequence.append(chr)
+    return new_sequence
+
+def getAllSequence(bed, group_dir):
+    bed = pd.read_csv(bed,sep='\t',header=None)[[0,1]]
+
+    chrlist = bed[0].unique().tolist()
+
+    new_sequence = []
+    new_name_sequence = []
+    for i in chrlist:
+        split = bed.loc[bed[0] == i][1].tolist()
+
+        chr = []
+        chr_name = []
+        for j in split:
+            if j in group_dir.keys():
+               chr.append(group_dir[j])
+               chr_name.append(j)
+
+        new_sequence.append(chr)
+        new_name_sequence.append(chr_name)
+    return new_sequence,new_name_sequence
+
+
+def outSequence(sequence,outfile):
+    outfile = open(outfile,'w')
+    for i in sequence:
+        for j in i:
+            outfile.write(str(j)+' ')
+        outfile.write('\n')
+    outfile.close()
 
 
 gff_path_list = []
@@ -114,60 +159,13 @@ group_filter_dir = {}
 for i in group_filter:
     group_filter_dir[i[0]] = i[1]
 
-def getFilterSequence(bed):
-    bed = pd.read_csv(bed,sep='\t',header=None)[[0,1]]
-
-    chrlist = bed[0].unique().tolist()
-
-    new_sequence = []
-    for i in chrlist:
-        split = bed.loc[bed[0] == i][1].tolist()
-
-        chr = []
-        for j in split:
-            if j in group_filter_dir.keys():
-               chr.append(group_filter_dir[j])
-        new_sequence.append(chr)
-    return new_sequence
-
-def getAllSequence(bed):
-    bed = pd.read_csv(bed,sep='\t',header=None)[[0,1]]
-
-    chrlist = bed[0].unique().tolist()
-
-    new_sequence = []
-    new_name_sequence = []
-    for i in chrlist:
-        split = bed.loc[bed[0] == i][1].tolist()
-
-        chr = []
-        chr_name = []
-        for j in split:
-            if j in group_dir.keys():
-               chr.append(group_dir[j])
-               chr_name.append(j)
-
-        new_sequence.append(chr)
-        new_name_sequence.append(chr_name)
-    return new_sequence,new_name_sequence
-
-
-def outSequence(sequence,outfile):
-    outfile = open(outfile,'w')
-    for i in sequence:
-        for j in i:
-            outfile.write(str(j)+' ')
-        outfile.write('\n')
-    outfile.close()
-
-
 sample_sequence_files = dir + '/drimm.sequence'
 sample_sequence_files = open(sample_sequence_files, 'w')
 
 for i in gff_list:
     gff = dir + '/' + i
-    sequence,sequence_name = getAllSequence(gff)
-    filter_sequence = getFilterSequence(gff)
+    sequence,sequence_name = getAllSequence(gff, group_dir)
+    filter_sequence = getFilterSequence(gff, group_filter_dir)
     item = i.split('.')
     outfile = dir  + '/' + item[0] +'.sequence'
     outSequence(filter_sequence, outfile)

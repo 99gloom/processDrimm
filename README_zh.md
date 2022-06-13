@@ -7,8 +7,7 @@ IAGS所使用的block文件可通过DRIMM-synteny生成。
 ## 1.生成DRIMM-synteny的input文件 (processOrthofinder.py)
 
 ```python
-dir = './processDRIMM/example/'
-
+dir = './example'
 sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 gff_list = ['Brachy.gff','Maize.gff','Rice.gff','Sorghum.gff','Telongatum.gff']
 sp_ratio = [2,4,2,2,2]
@@ -78,22 +77,22 @@ DRIMM-synteny的输入:
 ## 3.生成IAGS的input (processDrimm.py)
 
 ```python
-block_file = './processDRIMM/example/drimm/blocks.txt'
-synteny_file = './processDRIMM/example/drimm/synteny.txt'
-outdir = './processDRIMM/example/drimm/'
+block_file = './example/drimm/blocks.txt'
+drimmSyntenyFile = './example/drimm/synteny.txt'
+outdir = './example'
 chr_number = [5,10,12,10,7]
 sp_list = ['Brachy','Maize','Rice','Sorghum','Telongatum']
 target_rate = '2:4:2:2:2'
 ```
-+ block_file: 上一步生成的block.txt路径
-+ synteny_file: 上一步生成的synteny.txt路径
-+ outdir: 结果文件输出路径
++ block_file: 上一步生成的blocks.txt路径
++ drimmSyntenyFile: 上一步生成的synteny.txt路径
++ outdir: 结果文件输出路径(应与processOrthofinder.py中的输出路径一致)
 + chr_number: 各个物种的染色体数
 + sp_list: 物种列表
 + target_rate: 各目标拷贝数比例
 
-processDrimm.py对文件进行拆分，并且对不满足期望拷贝数的共线块进行过滤，得到各个物种的.block，如:
-
+processDrimm.py主要有两个步骤。
+第一步，将blocks文件进行拆分，得到各个物种的.block文件，并将.block文件中的共线块序列还原为geneID序列，再使用LCS算法将其和物种实际geneID序列进行匹配，得到各个共线块在原始物种中的geneID以及genename，可供下游生物学分析。第二步，将block
 ```
 s -87 -86 -85 -122 83 -123 -124 125 106 109 -108 
 s -156 -157 158 -155 -154 53 54 -152 -78 -77 128 -130 132 133 

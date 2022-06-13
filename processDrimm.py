@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from utils import processLCSAndFirstFilter as plff
 from utils import processFinalFilter as pff
+import shutil
 
 
 block_file = './example/drimm/blocks.txt'
@@ -78,6 +79,7 @@ processLCSAndFirstFilter.excute()
 processFinalFilter = pff.processFinalFilter(sp_list, raw_block_dir, drimm_split_blocks_dir,  result_dir, 's')
 processFinalFilter.excute()
 
+shutil.rmtree(raw_block_dir)
 
 
 

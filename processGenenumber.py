@@ -1,3 +1,7 @@
+sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
+finalBlocks = './example/finalBlocks'
+
+
 def processGenenumber(sp, resultDir):
     block_len = {}
     for i in sp:
@@ -21,6 +25,5 @@ def processGenenumber(sp, resultDir):
             f.write(i + '\t' + str(j) + '\n')
     return
 
-sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
-finalBlocks = './example/finalBlocks'
+
 processGenenumber(sp, finalBlocks)

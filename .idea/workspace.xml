@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="Default Changelist">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_5_31_9_55___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/在变基之前未提交的更改_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_5_31_9_55_取消提交了变更_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README_zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_zh.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Brachy.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Maize.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Rice.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Sorghum.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/temporaryBlockFiles/Telongatum.block" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processDrimm.py" beforeDir="false" afterPath="$PROJECT_DIR$/processDrimm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processGenenumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/processGenenumber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processOrthofinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/processOrthofinder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +196,7 @@
       <workItem from="1653544490894" duration="532000" />
       <workItem from="1654006205821" duration="77000" />
       <workItem from="1655105932908" duration="10524000" />
+      <workItem from="1655140637636" duration="5220000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1650771823108</created>

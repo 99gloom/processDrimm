@@ -91,10 +91,11 @@ target_rate = '2:4:2:2:2'
 + sp_list: 物种列表
 + target_rate: 各目标拷贝数比例
 
-processDrimm.py主要有两个步骤。
-第一步，将blocks文件进行拆分，得到各个物种的.block文件，并将.block文件中的共线块序列还原为同源基因ID序列，再使用LCS算法将其和物种实际同源基因ID序列进行匹配，得到各个共线块在原始物种中的同源基因ID序列以及genename序列，可供下游生物学分析。第二步，将各物种.block文件中对不满足期望拷贝数的共线块过滤，得到各个物种的.final.block，供IAGS输入。最终输出drimmBlocks和finalBlocks两个文件夹，两个文件夹中结果文件的格式是相同的。
+processDrimm.py主要有两个步骤。第一步，将blocks文件进行拆分，得到各个物种的.block文件，并将.block文件中的共线块序列还原为同源基因ID序列，再使用LCS算法将其和物种实际同源基因ID序列进行匹配，得到各个共线块在原始物种中的同源基因ID序列以及genename序列，可供下游生物学分析。第二步，将各物种.block文件中对不满足期望拷贝数的共线块过滤，得到各个物种的.final.block，供IAGS输入。   
+最终输出drimmBlocks和finalBlocks两个文件夹，两个文件夹中文件格式是相同的。不同点在于，drimmBlocks中的.block文件为未经过滤的block序列。另外两个.synteny和.synteny.genename文件为这个.block文件对应的共线块信息。finalBlocks中的.final.block文件为过滤后符合物种期望拷贝数的block，而另外两种.synteny和.synteny.genename文件为其.final.block文件对应的共线块信息。其中.final.block可以用作IAGS的输入文件。
 
-drimmBlocks文件夹中文件格式示例:
+
+drimmBlocks文件夹中三种文件格式示例:
 
 + Brachy.block
 ```
@@ -105,6 +106,7 @@ s 804 -1592 1189 393 -1378 -1388 1363 -1622 754 -775 -1649 1418 1580 -991 -1635 
 s -219 589 1049 1129 992 982 745 310 -628 -949 -403 681 1228 448 382 -1181 1433 742 -1639 1377 1048 1332 1412 1057 -1347 712 -1356 926 -1614 -888 -1651 928 1440 717 -1588 822 1645 -885 -1578 -883 740 1587 1473 -1573 1593 1612 -1158 1576 -934 -1602 1079 1598 -927 559 1036 -1600 1064 683 -923 -814 -697 533 -1354 886 1584 1046 -1611 1489 -1023 -1076 -1235 1092 -1608 760 867 -413 591 -1086 -825 501 440 
 
 # 物种的共线块信息，其中正负号表示方向，s表示线性染色体
+# 与finalBlocks文件夹中的.final.block文件格式相同，不同点在于.final.block中记录的是过滤后符合物种期望拷贝数的block
 ```
 + Brachy.synteny
 ```
@@ -141,9 +143,30 @@ s -219 589 1049 1129 992 982 745 310 -628 -949 -403 681 1228 448 382 -1181 1433 
 # 第四列(第一个空格后)及以后为LCS匹配后，block在实际物种中同源基因的ID
 ```
 
-finalBlocks文件夹中的文件和drimmBlocks文件夹中文件格式是一样的。不同点在于，finalBlocks中的.final.block是符合物种期望拷贝数的block，而其中的.synteny和.synteny.genename文件的共线块位置信息对应于.final.block文件。各物种的.final.block即是IAGS的输入文件。
 
-## 4.生成IAGS的genenumber
+## 4.生成IAGS绘图所需的blockindex.genenumber文件
+
+```python
+sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
+finalBlocks_path = './example/finalBlocks'
+```
++ sp: 物种列表
++ finalBlocks_path: 上一步生成的finalBlocks文件夹路径
+
+processGenenumber.py的输出:
++ blockindex.genenumber
+```
+blockID	blockLength
+1590	46
+1592	50
+1622	16
+1649	114
+1635	23
+1561	36
+1554	175
+
+# 第一列为block号，第二列为block长度，其中block长度为LCS匹配后，block在实际物种中最长的长度
+```
 
 ## DRIMM-synteny
 

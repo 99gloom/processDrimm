@@ -1,5 +1,5 @@
 sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
-finalBlocks = './example/finalBlocks'
+finalBlocks_path = './example/finalBlocks'
 
 
 def processGenenumber(sp, resultDir):
@@ -26,4 +26,4 @@ def processGenenumber(sp, resultDir):
     return
 
 
-processGenenumber(sp, finalBlocks)
+processGenenumber(sp, finalBlocks_path)

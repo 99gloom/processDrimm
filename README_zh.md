@@ -92,6 +92,15 @@ target_rate = '2:4:2:2:2'
 + target_rate: 各目标拷贝数比例
 
 processDrimm.py主要有两个步骤。第一步，将blocks文件进行拆分，得到各个物种的.block文件，并将.block文件中的共线块序列还原为同源基因ID序列，再使用LCS算法将其和物种实际同源基因ID序列进行匹配，得到各个共线块在原始物种中的同源基因ID序列以及genename序列，可供下游生物学分析。第二步，将各物种.block文件中对不满足期望拷贝数的共线块过滤，得到各个物种的.final.block，供IAGS输入。   
+
+<div style="text-align: center;">
+<img src="https://s1.328888.xyz/2022/06/15/pO5gJ.png" alt="block sequence to geneID sequence">
+将block序列还原为gene序列
+<br>
+<img src="https://s1.328888.xyz/2022/06/15/pOlV0.png" alt="LCS between two sequences">
+通过LCS匹配，得到block在真实物种中的gene序列
+</div>
+
 最终输出drimmBlocks和finalBlocks两个文件夹，两个文件夹中文件格式是相同的。不同点在于，drimmBlocks中的.block文件为未经过滤的block序列。另外两个.synteny和.synteny.genename文件为这个.block文件对应的共线块信息。finalBlocks中的.final.block文件为过滤后符合物种期望拷贝数的block，而另外两种.synteny和.synteny.genename文件为其.final.block文件对应的共线块信息。其中.final.block可以用作IAGS的输入文件。
 
 

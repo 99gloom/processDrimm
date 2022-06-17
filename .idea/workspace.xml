@@ -156,8 +156,8 @@
     <list>
       <item itemvalue="Python.processBlock" />
       <item itemvalue="Python.processDrimm" />
-      <item itemvalue="Python.processOrthofinder" />
       <item itemvalue="Python.processGenenumber" />
+      <item itemvalue="Python.processOrthofinder" />
     </list>
     <recent_temporary>
       <list>

@@ -94,15 +94,8 @@ target_rate = '2:4:2:2:2'
 + sp_list：物种列表
 + target_rate：各目标拷贝数比例
 
-processDrimm
+processDrimm主要有两个步骤。第一步，将blocks文件进行拆分，得到各个物种的.block文件，并将.block文件中的共线块序列还原为同源基因ID序列，再使用LCS算法将其和物种实际同源基因ID序列进行匹配，得到各个共线块在原始物种中的同源基因ID序列以及genename序列，可供下游生物学分析。第二步，将各物种.block文件中对不满足期望拷贝数的共线块过滤，得到各个物种的.final.block，供IAGS输入。  
 
-因为DRIMM-Synteny的输入为过滤后的同源基因序列，所以一些同源基因没有在共线块上，需要在各物种中找回。具体步骤为：
-
-+ 拆分blocks.txt文件，得到各个物种的.block文件
-+ 得到每个物种每个共线块的完整同源基因序列。见下图1
-+ 将各物种.block文件中对不满足期望拷贝数的共线块过滤，得到各个物种的.final.block，供IAGS输入。
-
-  
 
 + LCS示意图
   ```

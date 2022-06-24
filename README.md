@@ -89,16 +89,49 @@ target_rate = '2:4:2:2:2'
 + sp_list: All species name
 + target_rate: The target copy number of each species
 
-processDrimm.py splits blocks.txt file into each species and filters synteny blocks whose the number of block occurrences not equal to the target copy number in each species.
+Firstly, processDrimm splits the blocks file to obtain the .block file of each species, and restores the synteny block sequence in the .block files to get the homologous gene ID sequence. Since the gene that does not match the copy number is filtered in the processOrthofinder step, the LCS algorithm is used to match it with the real homologous gene ID sequence of the species. Then the homologous gene ID sequence and genename sequence of each synteny block in the original species are recovered for downstream biological analysis. Finally, filter the synteny blocks that do not meet the expected copy number in the .block files of each species to obtain the .final.block of each species for IAGS input. Finally, the synteny blocks that do not match the expected copy number in the .block files of each species are filtered to obtain the .final.block for IAGS input. 
 
-```
-s -87 -86 -85 -122 83 -123 -124 125 106 109 -108 
-s -156 -157 158 -155 -154 53 54 -152 -78 -77 128 -130 132 133 
-s 134 143 60 -142 -58 -144 -59 -50 52 -153 -126 -89 90 119 81 -121 
-s 33 -32 -169 -167 -168 166 -93 95 96 -97 101 100 -114 113 -111 
-s -1 2 -7 -5 -3 8 -20 24 22 -21 -12 9 31 26 28 
-```
-This format could be IAGS input format and the s represents a linear chromosome.
++ LCS schematic
+  ```
+  1720:1 24 1256
+  1640:1 33 666 1230 720 140
+  666:1 557 886
+  
+  # Correspondence between synteny blocks ID and homologous genes in blocks.txt
+  ```
+  
+  ![s1L27.png](https://s1.328888.xyz/2022/06/24/s1L27.png)
+
+  <div style="text-align: center;">figure 1. Construction of complete homologous gene sequences in synteny blocks.</div>
+
+  ```
+  1720:1 24 288 1256
+  1640:1 366 666 1230 720 2348 140
+  666:1 557 567 886
+  
+  # After LCS matching, The real homologous genes ID of the synteny blocks in species A
+  ----------------------------------------------------
+  1720:1 a1 a2 a3
+  1640:1 a4 a5 a6 a7 a8 a9
+  666:1 a10 a11 a12
+  
+  # LCS处理后，共线块在物种A实际的同源基因名
+  ```
+  ```
+  1720:1 24 357 1256
+  1640:1 666 1230 543 720 1440 140
+  666:1 557 886
+  
+  # LCS处理后，共线块在物种B实际的同源基因ID
+  ----------------------------------------------------
+  1720:1 b1 b2 b3
+  1640:1 b4 b5 b6 b7 b8 b9
+  666:1 b11 b12
+  
+  # LCS处理后，共线块在物种B实际的同源基因名
+  ```
+
+
 
 ## DRIMM-synteny
 

@@ -89,7 +89,7 @@ target_rate = '2:4:2:2:2'
 + sp_list: All species name
 + target_rate: The target copy number of each species
 
-Firstly, processDrimm splits the blocks file to obtain the .block file of each species, and restores the synteny block sequence in the .block files to get the homologous gene ID sequence. Since the gene that does not match the copy number is filtered in the processOrthofinder step, the LCS algorithm is used to match it with the real homologous gene ID sequence of the species. Then the homologous gene ID sequence and genename sequence of each synteny block in the original species are recovered for downstream biological analysis. Finally, filter the synteny blocks that do not meet the expected copy number in the .block files of each species to obtain the .final.block of each species for IAGS input. Finally, the synteny blocks that do not match the expected copy number in the .block files of each species are filtered to obtain the .final.block for IAGS input. 
+Firstly, processDrimm splits the blocks file to obtain the .block file of each species, and restores the synteny block sequence in the .block files to the homologous gene ID sequence. Since the gene that does not match the copy number is filtered in the previous step, the LCS algorithm is used to match it with the real homologous gene ID sequence of the species. Then the homologous gene ID sequence and genename sequence of each synteny block in the original species are recovered for downstream biological analysis. Finally, the synteny blocks that do not meet the expected copy number in the .block files of each species are filtered to obtain the .final.block files for IAGS input. 
 
 + LCS schematic
   ```

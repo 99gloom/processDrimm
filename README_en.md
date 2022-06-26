@@ -117,6 +117,7 @@ Firstly, processDrimm splits the blocks file to obtain the .block file of each s
   
   # After LCS matching, the real homologous gene name of the synteny blocks in species A
   ```
+  
   ```
   1720:1 24 357 1256
   1640:1 666 1230 543 720 1440 140

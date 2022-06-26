@@ -108,7 +108,7 @@ processDrimm首先将blocks文件进行拆分，得到各个物种的.block文�
 
   ![LCS matching](https://s1.328888.xyz/2022/06/16/pxYEZ.png)
 
-  <div style="text-align: center;">图1 共线块完整同源基因序列的构建。</div>
+  <div align=center>图1 共线块完整同源基因序列的构建。</div>
 
   ```
   1720:1 24 288 1256

@@ -102,7 +102,7 @@ Firstly, processDrimm splits the blocks file to obtain the .block file of each s
   
   ![s1L27.png](https://s1.328888.xyz/2022/06/24/s1L27.png)
 
-  <div style="text-align: center;">figure 1. Construction of complete homologous gene sequences in synteny blocks.</div>
+  <div align=center>figure 1. Construction of complete homologous gene sequences in synteny blocks.</div>
 
   ```
   1720:1 24 288 1256

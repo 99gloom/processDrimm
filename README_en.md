@@ -29,7 +29,10 @@ Since the version of dotnet may be different in each PC, we recommend recompilin
 
 Running drimm.exe
 
-![DRIMM-synteny interface](https://s1.328888.xyz/2022/04/23/2R9HB.png)
+<div align="center">
+<img src="https://s1.328888.xyz/2022/04/23/2R9HB.png">
+</div>
+
 
 The input of DRIMM-synteny:
 + The path of drimm.sequence

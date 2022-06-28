@@ -31,7 +31,9 @@ processOrthofinder生成三种文件，分别为：
 
 运行drimm.exe
 
-![DRIMM-synteny界面](https://s1.328888.xyz/2022/04/23/2R9HB.png)
+<div align="center">
+<img src="https://s1.328888.xyz/2022/04/23/2R9HB.png">
+</div>
 
 DRIMM-synteny的输入：
 + drimm.sequence文件路径

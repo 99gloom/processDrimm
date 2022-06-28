@@ -19,7 +19,13 @@ sp_ratio = [2,4,2,2,2]
 + sp_ratio: Target copy number for species, e.g. one for no WGD event and two for one WGD event
 
 
-According to the target copy number of the species, processOrthofinder.py will filter the homologous genes that exceed the target copy number and obtain the gene order sequences used to prepare the synteny blocks. The output are .sequence files. Then, all the .sequence files need to be merged into drimm.sequence file which is the input of DRIMM-synteny.
+processOrthofinder generates three files, namely:
+
++ .all.sequence: The complete species homologous gene sequence. Each row represents a chromosome, and genes are represented by homologous gene ID
++ .all.sequence.genename: The format is the same as .all.sequence, but the genes are represented by the gene name
++ .sequence: Filtered species homologous gene sequence. Filter the homologous genes exceeding the target copy number in .all.sequence according to the species target copy number, represented by the homologous gene ID
+
+Then all the .sequence files are merged to get the drimm.sequence file as the input of DRIMM-synteny.
 
 ## 2.Running  DRIMM-synteny (drimm.exe)
 
@@ -92,7 +98,7 @@ target_rate = '2:4:2:2:2'
 + sp_list: All species name
 + target_rate: The target copy number of each species
 
-Firstly, processDrimm splits the blocks file to obtain the .block file of each species, and restores the synteny block sequence in the .block files to the homologous gene ID sequence. Since the gene that does not match the copy number is filtered in the previous step, the LCS algorithm is used to match it with the real homologous gene ID sequence of the species. Then the homologous gene ID sequence and genename sequence of each synteny block in the original species are recovered for downstream biological analysis. Finally, the synteny blocks that do not meet the expected copy number in the .block files of each species are filtered to obtain the .final.block files for IAGS input. 
+Firstly, processDrimm splits the blocks file to obtain the .block file of each species, and restores the synteny block sequence in the .block files to the homologous gene ID sequence. Since the gene that does not match the copy number is filtered in the previous step, the Longest Common Subsequence(LCS) algorithm is used to match it with the complete homologous gene ID sequence of the species. Then the homologous gene ID sequence and genename sequence of each synteny block in the original species are recovered for downstream biological analysis. Finally, the synteny blocks that do not meet the expected copy number in the .block files of each species are filtered to obtain the .final.block files for IAGS input. 
 
 + LCS schematic
   ```
@@ -105,20 +111,20 @@ Firstly, processDrimm splits the blocks file to obtain the .block file of each s
   
   ![s1L27.png](https://s1.328888.xyz/2022/06/24/s1L27.png)
 
-  <div align=center>figure 1. Construction of complete homologous gene sequences in synteny blocks.</div>
+  <div align=center><b>Fig. 1</b> Construction of complete homologous gene sequences in synteny blocks.</div>
 
   ```
   1720:1 24 288 1256
   1640:1 366 666 1230 720 2348 140
   666:1 557 567 886
   
-  # After LCS matching, The real homologous genes ID of the synteny blocks in species A
+  # After LCS matching, The complete homologous genes ID of the synteny blocks in species A
   ----------------------------------------------------
   1720:1 a1 a2 a3
   1640:1 a4 a5 a6 a7 a8 a9
   666:1 a10 a11 a12
   
-  # After LCS matching, the real homologous gene name of the synteny blocks in species A
+  # After LCS matching, the complete homologous gene name of the synteny blocks in species A
   ```
   
   ```
@@ -126,13 +132,13 @@ Firstly, processDrimm splits the blocks file to obtain the .block file of each s
   1640:1 666 1230 543 720 1440 140
   666:1 557 886
   
-  # After LCS matching, The real homologous genes ID of the synteny blocks in species B
+  # After LCS matching, The complete homologous genes ID of the synteny blocks in species B
   ----------------------------------------------------
   1720:1 b1 b2 b3
   1640:1 b4 b5 b6 b7 b8 b9
   666:1 b11 b12
   
-  # After LCS matching, the real homologous gene name of the synteny blocks in species B
+  # After LCS matching, the complete homologous gene name of the synteny blocks in species B
   ```
 
 The final output has two folders, drimmBlocks and finalBlocks, and the file formats in the two folders are same. The difference is that the .block files in drimmBlocks are unfiltered block sequences. The other two .synteny and .synteny.genename files are the synteny block information corresponding to its .block file. The .final.block files in finalBlocks are the blocks matched the expected copy number of the species after filtering, and the other two .synteny and .synteny.genename files are the synteny block information corresponding to the .final.block file. The .final.block files are used as the input file for IAGS.
@@ -175,7 +181,7 @@ s -1651 -1588 1645 -1578 1587 -1573 1593 1612 -1602 1598 -1600
 # The first column is the ID of the block
 # The second column (after the first colon) is the ordinal number of the block in the species (counting from left to right, top to bottom)
 # The third column (after the second colon) is the chromosome number where the block is located
-# The fourth column (after the first space) and later is the ID of the homologous genes of the block in the real species after LCS matching
+# The fourth column (after the first space) and later is the ID of the homologous genes of the block in the complete species after LCS matching
 ```
 + Brachy.synteny.genename
 ```
@@ -190,7 +196,7 @@ s -1651 -1588 1645 -1578 1587 -1573 1593 1612 -1602 1598 -1600
 # The first column is the ID of the block
 # The second column (after the first colon) is the ordinal number of the block in the species (counting from left to right, top to bottom)
 # The third column (after the second colon) is the chromosome number where the block is located
-# The fourth column (after the first space) and later is the name of the homologous genes of the block in the real species after LCS matching
+# The fourth column (after the first space) and later is the name of the homologous genes of the block in the complete species after LCS matching
 ```
 
 
@@ -216,7 +222,7 @@ blockID	blockLength
 1561	36
 1554	175
 
-# The first column is the block number, and the second column is the block length, where the block length is the maximum number of genes in the real species after LCS matching.
+# The first column is the block number, and the second column is the block length, where the block length is the maximum number of genes in the complete species after LCS matching.
 ```
 
 

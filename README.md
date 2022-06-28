@@ -96,7 +96,7 @@ target_rate = '2:4:2:2:2'
 + sp_list：物种列表
 + target_rate：各目标拷贝数比例
 
-processDrimm首先将blocks文件进行拆分，得到各个物种的.block文件，并将.block文件中的共线块序列还原为同源基因ID序列，由于processOrthofinder步骤中过滤了不符合拷贝数的基因，故使用LCS算法将其和物种实际同源基因ID序列进行匹配，恢复各个共线块在原始物种中的同源基因ID序列以及genename序列，可供下游生物学分析。最后，将各物种.block文件中对不满足期望拷贝数的共线块过滤，得到各个物种的.final.block，供IAGS输入。  
+processDrimm首先将blocks文件进行拆分，得到各个物种的.block文件，并将.block文件中的共线块序列还原为同源基因ID序列，由于processOrthofinder步骤中过滤了不符合拷贝数的基因，故使用最长公共子序列算法(LCS)将其和物种实际同源基因ID序列进行匹配，恢复各个共线块在原始物种中的同源基因ID序列以及genename序列，可供下游生物学分析。最后，将各物种.block文件中对不满足期望拷贝数的共线块过滤，得到各个物种的.final.block，供IAGS输入。  
 
 
 + LCS示意图
@@ -110,7 +110,7 @@ processDrimm首先将blocks文件进行拆分，得到各个物种的.block文�
 
   ![LCS matching](https://s1.328888.xyz/2022/06/16/pxYEZ.png)
 
-  <div align=center>图1 共线块完整同源基因序列的构建。</div>
+  <div align=center><b>图1</b> 共线块完整同源基因序列的构建。</div>
 
   ```
   1720:1 24 288 1256

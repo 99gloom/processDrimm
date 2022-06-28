@@ -209,7 +209,7 @@ finalBlocks_path = './example/finalBlocks'
 + sp：物种列表
 + finalBlocks_path：上一步生成的finalBlocks文件夹路径
 
-processGenenumber的输出为blockindex.genenumber文件，文件记录了共线块号与其在实际物种中最大基因数量的对应关系。该文件可以用作IAGS画图功能中plotChrsRearrangement的block_length_file参数。
+processGenenumber的输出为blockindex.genenumber文件，文件记录了共线块号与其在物种中最大基因数量的对应关系。该文件可以用作IAGS画图功能中plotChrsRearrangement的block_length_file参数。
 
 + blockindex.genenumber
 

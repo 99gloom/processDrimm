@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="Default Changelist" />
+    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="Default Changelist">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_zh.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Brachy.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Brachy.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Brachy.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Brachy.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Maize.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Maize.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Maize.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Maize.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Rice.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Rice.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Rice.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Rice.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Sorghum.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Sorghum.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Sorghum.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Sorghum.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Telongatum.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Telongatum.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/drimmBlocks/Telongatum.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/drimmBlocks/Telongatum.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Brachy.final.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Brachy.final.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Brachy.final.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Brachy.final.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Maize.final.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Maize.final.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Maize.final.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Maize.final.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Rice.final.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Rice.final.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Rice.final.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Rice.final.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Sorghum.final.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Sorghum.final.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Sorghum.final.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Sorghum.final.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Telongatum.final.synteny" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Telongatum.final.synteny" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/finalBlocks/Telongatum.final.synteny.genename" beforeDir="false" afterPath="$PROJECT_DIR$/example/finalBlocks/Telongatum.final.synteny.genename" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/tmp/Brachy.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/tmp/Maize.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/tmp/Rice.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/tmp/Sorghum.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/tmp/Telongatum.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/processFinalFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/processFinalFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/processLCSAndFirstFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/processLCSAndFirstFilter.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +67,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/processGenenumber.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/utils/processLCSAndFirstFilter.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/processDrimm.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/utils/processFinalFilter.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/processOrthofinder.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="288DRw7wdzdwUIzxytH7vpSObzj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,7 +85,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/example/Telongatum.all.sequence" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -56,12 +94,15 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/example/Telongatum.all.sequence" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\processDrimm" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\processDrimm" />
       <recent name="C:\Users\DELL\processDrimm\utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.recoverSequence">
+  <component name="RunManager" selected="Python.processDrimm">
     <configuration name="processBlock" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="processDRIMM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -181,9 +222,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.processDrimm" />
         <item itemvalue="Python.recoverSequence" />
         <item itemvalue="Python.processOrthofinder" />
-        <item itemvalue="Python.processDrimm" />
         <item itemvalue="Python.processGenenumber" />
         <item itemvalue="Python.processBlock" />
       </list>
@@ -232,6 +273,10 @@
       <workItem from="1656383766021" duration="84000" />
       <workItem from="1656384143136" duration="2236000" />
       <workItem from="1656401429014" duration="216000" />
+      <workItem from="1656401880824" duration="95000" />
+      <workItem from="1656404702995" duration="202000" />
+      <workItem from="1656408948773" duration="4692000" />
+      <workItem from="1660274669669" duration="8254000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1650771823108</created>
@@ -429,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656401595085</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Default Changelist">
+      <created>1656401942088</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1656401942088</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,18 +504,38 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="addLCS" />
+                        <option value="addBlockStrand" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="addBlockStrand" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -486,7 +558,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/processDrimm_py$processDrimm.coverage" NAME="processDrimm 覆盖结果" MODIFIED="1654139494624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/processDrimm_py$processDrimm.coverage" NAME="processDrimm 覆盖结果" MODIFIED="1660310540207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/processDrimm_py$recoverSequence.coverage" NAME="recoverSequence 覆盖结果" MODIFIED="1656171716322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Desktop" />
     <SUITE FILE_PATH="coverage/processDrimm_py$processOrthofinder.coverage" NAME="processOrthofinder 覆盖结果" MODIFIED="1654006342748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/processDrimm_py$processGenenumber.coverage" NAME="processGenenumber 覆盖结果" MODIFIED="1654139677225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

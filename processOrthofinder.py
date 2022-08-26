@@ -64,6 +64,7 @@ for i in gff_path_list:
     dataFrame = pd.read_csv(i, header=None, sep='\t')
     dataFrame[0] = dataFrame[0].astype(str)
     dataFrame[1] = dataFrame[1].astype(str)
+
     name = str(dataFrame.at[0, 0])
     number_index = 0
     for j in range(len(name) - 1, -1, -1):

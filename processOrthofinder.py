@@ -62,6 +62,7 @@ for i in range(len(gff_list)):
 
 for i in gff_path_list:
     dataFrame = pd.read_csv(i, header=None, sep='\t')
+    # 强制将chr和基因名转为str类型
     dataFrame[0] = dataFrame[0].astype(str)
     dataFrame[1] = dataFrame[1].astype(str)
 

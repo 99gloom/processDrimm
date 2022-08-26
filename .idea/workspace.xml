@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="增加健壮性" />
+    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="增加健壮性">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processOrthofinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/processOrthofinder.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,8 +191,8 @@
     <list>
       <item itemvalue="Python.processBlock" />
       <item itemvalue="Python.processDrimm" />
-      <item itemvalue="Python.processGenenumber" />
       <item itemvalue="Python.processOrthofinder" />
+      <item itemvalue="Python.processGenenumber" />
       <item itemvalue="Python.recoverSequence" />
     </list>
     <recent_temporary>
@@ -471,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660311878748</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="增加健壮性">
+      <created>1661504381630</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1661504381630</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +575,8 @@
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="synteny文件中增加block顺序标志位" />
     <MESSAGE value="synteny文件中增加block顺序标志位,更新英文版readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="synteny文件中增加block顺序标志位,更新英文版readme" />
+    <MESSAGE value="增加健壮性" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加健壮性" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

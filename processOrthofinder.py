@@ -9,7 +9,7 @@ sp_ratio = [2,4,2,2,2]
 
 
 def getFilterSequence(bed, group_filter_dir):
-    bed = pd.read_csv(bed,sep='\t',header=None, dtype='str')[[0,1]]
+    bed = pd.read_csv(bed,sep='\t',header=None)[[0,1]]
 
     chrlist = bed[0].unique().tolist()
 
@@ -25,7 +25,7 @@ def getFilterSequence(bed, group_filter_dir):
     return new_sequence
 
 def getAllSequence(bed, group_dir):
-    bed = pd.read_csv(bed,sep='\t',header=None, dtype='str')[[0,1]]
+    bed = pd.read_csv(bed,sep='\t',header=None)[[0,1]]
 
     chrlist = bed[0].unique().tolist()
 
@@ -61,7 +61,9 @@ for i in range(len(gff_list)):
     gff_path_list.append(temp)
 
 for i in gff_path_list:
-    dataFrame = pd.read_csv(i, header=None, sep='\t', dtype='str')
+    dataFrame = pd.read_csv(i, header=None, sep='\t')
+    dataFrame[0] = dataFrame[0].astype(str)
+    dataFrame[1] = dataFrame[1].astype(str)
     name = str(dataFrame.at[0, 0])
     number_index = 0
     for j in range(len(name) - 1, -1, -1):
@@ -79,7 +81,7 @@ for i in gff_path_list:
     dataFrame[1] = dataFrame[1].map(lambda x: x.split(';')[0])
     dataFrame.to_csv(i, header=None, index=None, sep='\t')
 
-ortho = pd.read_csv(dir+'/Orthogroups.tsv',sep='\t', dtype='str')
+ortho = pd.read_csv(dir+'/Orthogroups.tsv',sep='\t')
 ortho = ortho.fillna('')
 # print(ortho)
 columns = ortho.columns.tolist()
@@ -147,13 +149,13 @@ for i in group_dir.keys():
 outfile.close()
 outfile_filter.close()
 
-group = pd.read_csv(dir +'/group.xls',sep='\t', dtype='str')
+group = pd.read_csv(dir +'/group.xls',sep='\t')
 group = np.asarray(group)
 group_dir = {}
 for i in group:
     group_dir[i[0]] = i[1]
 
-group_filter = pd.read_csv(dir +'/filter_group.xls',sep='\t', dtype='str')
+group_filter = pd.read_csv(dir +'/filter_group.xls',sep='\t')
 group_filter = np.asarray(group_filter)
 group_filter_dir = {}
 for i in group_filter:

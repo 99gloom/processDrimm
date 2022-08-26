@@ -62,7 +62,7 @@ for i in range(len(gff_list)):
 
 for i in gff_path_list:
     dataFrame = pd.read_csv(i, header=None, sep='\t')
-    name = dataFrame.at[0, 0]
+    name = str(dataFrame.at[0, 0])
     number_index = 0
     for j in range(len(name) - 1, -1, -1):
         if name[j].isdigit():

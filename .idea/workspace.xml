@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="synteny文件中增加block顺序标志位">
+    <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="synteny文件中增加block顺序标志位,更新英文版readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_zh.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <recent name="C:\Users\DELL\processDrimm\utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.processDrimm">
+  <component name="RunManager" selected="Python.processOrthofinder">
     <configuration name="processBlock" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="processDRIMM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,9 +193,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.processOrthofinder" />
         <item itemvalue="Python.processDrimm" />
         <item itemvalue="Python.recoverSequence" />
-        <item itemvalue="Python.processOrthofinder" />
         <item itemvalue="Python.processGenenumber" />
         <item itemvalue="Python.processBlock" />
       </list>
@@ -250,7 +248,10 @@
       <workItem from="1656404702995" duration="202000" />
       <workItem from="1656408948773" duration="4692000" />
       <workItem from="1660274669669" duration="8354000" />
-      <workItem from="1660311558060" duration="210000" />
+      <workItem from="1660311558060" duration="328000" />
+      <workItem from="1660312470441" duration="124000" />
+      <workItem from="1660466061055" duration="126000" />
+      <workItem from="1660881612102" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1650771823108</created>
@@ -462,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660311452937</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="synteny文件中增加block顺序标志位,更新英文版readme">
+      <created>1660311878748</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1660311878748</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +538,8 @@
     <MESSAGE value="测试输出" />
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="synteny文件中增加block顺序标志位" />
-    <option name="LAST_COMMIT_MESSAGE" value="synteny文件中增加block顺序标志位" />
+    <MESSAGE value="synteny文件中增加block顺序标志位,更新英文版readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="synteny文件中增加block顺序标志位,更新英文版readme" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

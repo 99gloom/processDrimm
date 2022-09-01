@@ -3,10 +3,12 @@ import numpy as np
 
 dir = './example'
 sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
-gff_list = ['Brachy.gff','Maize.gff','Rice.gff','Sorghum.gff','Telongatum.gff']
 sp_ratio = [2,4,2,2,2]
 
 
+gff_list = []
+for i in sp:
+    gff_list.append(i+'.gff')
 
 def getFilterSequence(bed, group_filter_dir):
     bed = pd.read_csv(bed,sep='\t',header=None)[[0,1]]

@@ -9,16 +9,16 @@ IAGS所使用的block文件可通过DRIMM-synteny生成。
 ```python
 dir = './example'
 sp = ['Brachy','Maize','Rice','Sorghum','Telongatum']
-gff_list = ['Brachy.gff','Maize.gff','Rice.gff','Sorghum.gff','Telongatum.gff']
 sp_ratio = [2,4,2,2,2]
 ```
 
-+ dir：所有物种的gff文件存放路径(gff文件与[MCScanX](https://github.com/wyp1125/MCScanx) 输入相同)
++ dir：所有物种的gff文件(gff文件格式与[MCScanX](https://github.com/wyp1125/MCScanx) 输入相同)，以及Orthogroups.tsv([OrthoFinder](https://github.com/davidemms/OrthoFinder) 的输出文件)存放路径。
 + sp：物种列表
-+ Orthogroups.tsv：[OrthoFinder](https://github.com/davidemms/OrthoFinder) 的输出文件
 + sp_ratio：目标物种拷贝数，例如没有加倍事件为1，一次WGD事件为2
 
-processOrthofinder生成三种文件，分别为：  
+其中，gff文件需要以物种名来命名(例如：Brachy.gff)，gff文件中第一列染色体的命名方式为specie_N(例如：Brachy_1)，另外，Orthogroups.tsv文件中第一行中的物种名需要和gff的文件名对应。
+
+最终，processOrthofinder生成三种文件，分别为：  
 + .all.sequence：完整物种同源基因序列。每一行表示一条染色体，基因以同源基因ID表示
 + .all.sequence.genename：与.all.sequence格式一致，但是基因以基因名表示
 + .sequence：过滤后物种同源基因序列。根据物种目标拷贝数对.all.sequence中超过目标拷贝数的同源基因进行过滤，以同源基因ID表示

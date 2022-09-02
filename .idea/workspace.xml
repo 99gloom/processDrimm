@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="26d2d19d-71b5-4d39-a934-6a2298328675" name="Default Changelist" comment="简化部分输入，更新readme，增加gff文件和Orthogroups文件格式的要求说明">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_zh.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,6 +262,8 @@
       <workItem from="1661516146952" duration="11000" />
       <workItem from="1661759404644" duration="726000" />
       <workItem from="1661936610473" duration="7852000" />
+      <workItem from="1662037385717" duration="93000" />
+      <workItem from="1662037517580" duration="1194000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1650771823108</created>

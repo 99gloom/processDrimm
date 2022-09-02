@@ -16,7 +16,7 @@ sp_ratio = [2,4,2,2,2]
 + sp: Species names
 + sp_ratio: Target copy number for species, e.g. one for no WGD event and two for one WGD event
 
-The gff files need to be named after the species name (for example: Brachy.gff), and the naming method of the first column of chromosomes in the gff file is specie_N (for example: Brachy_1). In addition, the species name in the first line of the Orthogroups.tsv file needs to correspond to the file name of gff.
+The gff files need to be named after the species name (for example: Brachy.gff), the naming method of the first column of chromosomes in the gff file is specie_N, and the chromosome number starts from 1 (for example: Brachy_1). In addition, the species name in the first line of the Orthogroups.tsv file needs to correspond to the file name (ie, the species name) of gff.
 
 processOrthofinder generates three files, namely:
 

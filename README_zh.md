@@ -16,7 +16,7 @@ sp_ratio = [2,4,2,2,2]
 + sp：物种列表
 + sp_ratio：目标物种拷贝数，例如没有加倍事件为1，一次WGD事件为2
 
-其中，gff文件需要以物种名来命名(例如：Brachy.gff)，gff文件中第一列染色体的命名方式为specie_N(例如：Brachy_1)，另外，Orthogroups.tsv文件中第一行中的物种名需要和gff的文件名对应。
+其中，gff文件需要以物种名来命名(例如：Brachy.gff)，gff文件中第一列染色体的命名方式为specie_N，且染色体序号从1开始(例如：Brachy_1)，另外，Orthogroups.tsv文件中第一行中的物种名需要和gff的文件名(即物种名)对应。
 
 最终，processOrthofinder生成三种文件，分别为：  
 + .all.sequence：完整物种同源基因序列。每一行表示一条染色体，基因以同源基因ID表示

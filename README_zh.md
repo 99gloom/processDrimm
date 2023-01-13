@@ -108,7 +108,7 @@ processDrimm首先将blocks文件进行拆分，得到各个物种的.block文�
   # blocks.txt中共线块ID和同源基因的对应关系
   ```
 
-  ![LCS.png](https://i.328888.xyz/2023/01/13/wUy3k.png)
+  ![LCS.png](https://i.postimg.cc/Qd053RSj/LCS.png)
 
   <div align=center><b>图1</b> 共线块完整同源基因序列的构建。</div>
 

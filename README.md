@@ -35,7 +35,7 @@ Since the version of dotnet may be different in each PC, we recommend recompilin
 Running drimm.exe
 
 <div align="center">
-<img src="https://s1.328888.xyz/2022/04/23/2R9HB.png">
+<img src="https://i.328888.xyz/2023/01/13/wUDip.png">
 </div>
 
 
@@ -108,7 +108,7 @@ Firstly, processDrimm splits the blocks file to obtain the .block file of each s
   # Correspondence between synteny blocks ID and homologous genes in blocks.txt
   ```
   
-  ![s1L27.png](https://s1.328888.xyz/2022/06/24/s1L27.png)
+  ![s1L27.png](https://i.328888.xyz/2023/01/13/wU45L.png)
 
   <div align=center><b>Fig. 1</b> Construction of complete homologous gene sequences in synteny blocks.</div>
 
